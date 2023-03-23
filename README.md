@@ -4,6 +4,7 @@
 ## Indice de Contenidos.
 
 - [Instalación](#item1)
+- [Color modes](#item2)
 
 <a name="item1"></a>
 
@@ -89,5 +90,51 @@ Route::get('/', function () {
 ```
 
 >Podemos inicializar los servidores Frontend y Backend
+
+[Subir](#top)
+
+<a name="item2"></a>
+
+## Color modes
+
+>Creamos el archivo `theme.scss` en la carpeta `resources\scss\theme.scss` y escribimos lo siguiente.
+
+```scss
+[data-bs-theme="dark"] {
+  --bs-body-color: var(--bs-white);
+  --bs-body-color-rgb: #{to-rgb($white)};
+  --bs-body-bg: var(--bs-dark);
+  --bs-body-bg-rgb: #{to-rgb($dark)};
+  --bs-tertiary-bg: #{$gray-600};
+
+  .dropdown-menu {
+    --bs-dropdown-bg: #{mix($gray-500, $gray-600)};
+    --bs-dropdown-link-active-bg: #{$gray-700};
+  }
+
+  .btn-secondary {
+    --bs-btn-bg: #{mix($teal-100, $gray-900, .5)};
+    --bs-btn-border-color: #{rgba($white, .25)};
+    --bs-btn-hover-bg: #{darken(mix($teal-100, $gray-600, .5), 5%)};
+    --bs-btn-hover-border-color: #{rgba($white, .25)};
+    --bs-btn-active-bg: #{darken(mix($teal-100, $gray-600, .5), 10%)};
+    --bs-btn-active-border-color: #{rgba($white, .5)};
+    --bs-btn-focus-border-color: #{rgba($white, .5)};
+    --bs-btn-focus-box-shadow: 0 0 0 .25rem rgba(255, 255, 255, .2);
+  }
+}
+```
+
+>Abrimos el archivo `app.scss` en la carpeta `resources\scss\app.scss` y escribimos lo siguiente.
+
+```scss
+@import "theme";
+```
+
+>Abrimos el archivo `plantilla.blade.php` en la carpeta `resources\views\layouts\plantilla.blade.php` y escribimos lo siguiente.
+
+```php
+<html lang="es" data-bs-theme="dark">
+```
 
 [Subir](#top)
