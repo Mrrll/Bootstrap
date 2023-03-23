@@ -11,7 +11,15 @@
 <body>
     {{-- @include('layouts.partials.header') --}}
     {{-- @yield('content') --}}
-    Hola Mundo !!!
-    
+    <div class="callout callout-info">
+        Hola Mundo !!!
+    </div>
+    <div class="callout callout-warning">
+        Hola Mundo !!!
+    </div>
+    <div class="callout callout-danger">
+        Hola Mundo !!!
+    </div>
+
 </body>
 </html>

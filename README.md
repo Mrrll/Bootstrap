@@ -5,6 +5,7 @@
 
 - [Instalación](#item1)
 - [Color modes](#item2)
+- [Componentes](#item3)
 
 <a name="item1"></a>
 
@@ -135,6 +136,50 @@ Route::get('/', function () {
 
 ```php
 <html lang="es" data-bs-theme="dark">
+```
+
+[Subir](#top)
+
+
+<a name="item3"></a>
+
+## Componentes
+
+>Abrimos el archivo `plantilla.blade.php` en la carpeta `resources\views\layouts\plantilla.blade.php` y escribimos lo siguiente.
+
+```php
+    <div class="callout callout-info">
+        Hola Mundo !!!
+    </div>
+    <div class="callout callout-warning">
+        Hola Mundo !!!
+    </div>
+    <div class="callout callout-danger">
+        Hola Mundo !!!
+    </div>
+```
+
+>Abrimos el archivo `app.scss` en la carpeta `resources\scss\app.scss` y escribimos lo siguiente.
+
+```scss
+.callout {
+    width: 100%;
+    border-left: 1rem solid;
+    padding: 2rem;
+}
+
+.callout-info {
+    background-color: $blue-400;
+    border-left-color: $blue-500;
+}
+.callout-warning {
+    background-color: $yellow-300;
+    border-left-color: $yellow-500;
+}
+.callout-danger {
+    background-color: $red-500;
+    border-left-color: $red-600;
+}
 ```
 
 [Subir](#top)

@@ -1,2 +1,21 @@
 @import "~bootstrap/scss/bootstrap";
 @import "theme";
+
+.callout {
+    width: 100%;
+    border-left: 1rem solid;
+    padding: 2rem;
+}
+
+.callout-info {
+    background-color: $blue-400;
+    border-left-color: $blue-500;
+}
+.callout-warning {
+    background-color: $yellow-300;
+    border-left-color: $yellow-500;
+}
+.callout-danger {
+    background-color: $red-500;
+    border-left-color: $red-600;
+}
