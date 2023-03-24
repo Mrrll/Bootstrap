@@ -9,6 +9,7 @@
 - [Variables de componentes](#item4)
 - [Puntos de ruptura](#item5)
 - [Contenedores](#item6)
+- [Sistema de red(Grid)](#item7)
 
 <a name="item1"></a>
 
@@ -243,7 +244,7 @@ $grid-breakpoints: (
     <div class="container-fluid bg-success text-light">Contenedor de ancho completo, que abarque todo el ancho de la ventana gráfica</div>
     <div class="custom-container bg-warning text-light">Contenedor Personalizado de ancho completo, que abarque todo el ancho de la ventana gráfica</div>
 ```
-|Extra Pequeño|Pequeño|Medio|Grande|Extra grande|XX-Grande|
+|Extra Pequeño |Pequeño |Medio |Grande |Extra grande | XX-Grande|
 |<576 píxeles|≥576px|≥768px| ≥992px|≥1200px|≥1400px|
 | --- | --- | --- | --- | --- | --- |
 |.container|	100% |	540px |	720px |	960px |	1140px | 1320px|
@@ -272,4 +273,286 @@ $grid-breakpoints: (
 }
 ```
 
+[Subir](#top)
+
+<a name="item7"></a>
+
+## Sistema de red(Grid)
+
+>Abrimos el archivo `plantilla.blade.php` en la carpeta `resources\views\layouts\plantilla.blade.php` y escribimos lo siguiente.
+
+```php
+<div class="container text-center">
+        <div class="row bd-example bd-example-row">
+            <div class="col bd-example-col text-light">
+                Column
+            </div>
+            <div class="col bd-example-col text-light">
+                Column
+            </div>
+            <div class="col bd-example-col text-light">
+                Column
+            </div>
+        </div>
+    </div>
+<div class="container text-center">
+        <div class="row bd-example bd-example-row">
+            <div class="col bd-example-col text-light">
+                1 of 2
+            </div>
+            <div class="col bd-example-col text-light">
+                2 of 2
+            </div>
+        </div>
+        <div class="row bd-example bd-example-row">
+            <div class="col bd-example-col text-light">
+                1 of 3
+            </div>
+            <div class="col bd-example-col text-light">
+                2 of 3
+            </div>
+            <div class="col bd-example-col text-light">
+                3 of 3
+            </div>
+        </div>
+    </div>
+<div class="container text-center">
+        <div class="row bd-example bd-example-row">
+            <div class="col bd-example-col text-light">
+                1 of 3
+            </div>
+            <div class="col-6 bd-example-col text-light">
+                2 of 3 (más ancho)
+            </div>
+            <div class="col bd-example-col text-light">
+                3 of 3
+            </div>
+        </div>
+        <div class="row bd-example bd-example-row">
+            <div class="col bd-example-col text-light">
+                1 of 3
+            </div>
+            <div class="col-5 bd-example-col text-light">
+                2 of 3 (más ancho)
+            </div>
+            <div class="col bd-example-col text-light">
+                3 of 3
+            </div>
+        </div>
+    </div>
+<div class="container text-center">
+        <div class="row justify-content-md-center bd-example bd-example-row">
+            <div class="col col-lg-2 bd-example-col text-light">
+                1 of 3
+            </div>
+            <div class="col-md-auto bd-example-col text-light">
+                Contenido de ancho variable
+            </div>
+            <div class="col col-lg-2 bd-example-col text-light">
+                3 of 3
+            </div>
+        </div>
+        <div class="row bd-example bd-example-row">
+            <div class="col bd-example-col text-light">
+                1 of 3
+            </div>
+            <div class="col-md-auto bd-example-col text-light">
+                Contenido de ancho variable
+            </div>
+            <div class="col col-lg-2 bd-example-col text-light">
+                3 of 3
+            </div>
+        </div>
+    </div>
+<div class="container text-center">
+        <div class="row bd-example bd-example-row">
+            <div class="col bd-example-col text-light">col</div>
+            <div class="col bd-example-col text-light">col</div>
+            <div class="col bd-example-col text-light">col</div>
+            <div class="col bd-example-col text-light">col</div>
+        </div>
+        <div class="row bd-example bd-example-row">
+            <div class="col-8 bd-example-col text-light">col-8</div>
+            <div class="col-4 bd-example-col text-light">col-4</div>
+        </div>
+    </div>
+<div class="container text-center">
+        <div class="row bd-example bd-example-row">
+            <div class="col-sm-8 bd-example-col text-light">col-sm-8</div>
+            <div class="col-sm-4 bd-example-col text-light">col-sm-4</div>
+        </div>
+        <div class="row bd-example bd-example-row">
+            <div class="col-sm bd-example-col text-light">col-sm</div>
+            <div class="col-sm bd-example-col text-light">col-sm</div>
+            <div class="col-sm bd-example-col text-light">col-sm</div>
+        </div>
+    </div>
+<div class="container text-center">
+        <!-- Apile las columnas en el móvil haciendo una de ancho completo y la otra de medio ancho -->
+        <div class="row bd-example bd-example-row">
+            <div class="col-md-8 bd-example-col text-light">.col-md-8</div>
+            <div class="col-6 col-md-4 bd-example-col text-light">.col-6 .col-md-4</div>
+        </div>
+        <!-- Las columnas comienzan con un 50 % de ancho en dispositivos móviles y aumentan hasta un 33,3 % de ancho en computadoras de escritorio -->
+        <div class="row bd-example bd-example-row">
+            <div class="col-6 col-md-4 bd-example-col text-light">.col-6 .col-md-4</div>
+            <div class="col-6 col-md-4 bd-example-col text-light">.col-6 .col-md-4</div>
+            <div class="col-6 col-md-4 bd-example-col text-light">.col-6 .col-md-4</div>
+        </div>
+
+        <!-- Las columnas siempre tienen un 50% de ancho, en dispositivos móviles y de escritorio -->
+        <div class="row bd-example bd-example-row">
+            <div class="col-6 bd-example-col text-light">.col-6</div>
+            <div class="col-6 bd-example-col text-light">.col-6</div>
+        </div>
+    </div>
+<div class="container text-center">
+        <div class="row row-cols-2 bd-example bd-example-row">
+            <div class="col bd-example-col text-light">Column</div>
+            <div class="col bd-example-col text-light">Column</div>
+            <div class="col bd-example-col text-light">Column</div>
+            <div class="col bd-example-col text-light">Column</div>
+        </div>
+    </div>
+<div class="container text-center">
+        <div class="row row-cols-3 bd-example bd-example-row">
+            <div class="col bd-example-col text-light">Column</div>
+            <div class="col bd-example-col text-light">Column</div>
+            <div class="col bd-example-col text-light">Column</div>
+            <div class="col bd-example-col text-light">Column</div>
+        </div>
+    </div>
+    <div class="container text-center">
+        <div class="row row-cols-auto bd-example bd-example-row">
+            <div class="col bd-example-col text-light">Column</div>
+            <div class="col bd-example-col text-light">Column</div>
+            <div class="col bd-example-col text-light">Column</div>
+            <div class="col bd-example-col text-light">Column</div>
+        </div>
+    </div>
+    <div class="container text-center">
+        <div class="row row-cols-4 bd-example bd-example-row">
+            <div class="col bd-example-col text-light">Column</div>
+            <div class="col bd-example-col text-light">Column</div>
+            <div class="col bd-example-col text-light">Column</div>
+            <div class="col bd-example-col text-light">Column</div>
+        </div>
+    </div>
+    <div class="container text-center">
+        <div class="row row-cols-4 bd-example bd-example-row">
+            <div class="col bd-example-col text-light">Column</div>
+            <div class="col bd-example-col text-light">Column</div>
+            <div class="col-6 bd-example-col text-light">Column</div>
+            <div class="col bd-example-col text-light">Column</div>
+        </div>
+    </div>
+    <div class="container text-center">
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 bd-example bd-example-row">
+            <div class="col bd-example-col text-light">Column</div>
+            <div class="col bd-example-col text-light">Column</div>
+            <div class="col bd-example-col text-light">Column</div>
+            <div class="col bd-example-col text-light">Column</div>
+        </div>
+    </div>
+<div class="container text-center">
+        <div class="row bd-example bd-example-row">
+            <div class="col-sm-3 bd-example-col text-light">
+                Level 1: .col-sm-3
+            </div>
+            <div class="col-sm-9 bd-example-col text-light">
+                <div class="row bd-example bd-example-row">
+                    <div class="col-8 col-sm-6 bd-example-col text-light">
+                        Level 2: .col-8 .col-sm-6
+                    </div>
+                    <div class="col-4 col-sm-6 bd-example-col text-light">
+                        Level 2: .col-4 .col-sm-6
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<div class="example-container">
+        <div class="example-row">
+            <div class="example-content-main">Main content</div>
+            <div class="example-content-secondary">Secondary content</div>
+        </div>
+</div>
+```
+
+>Abrimos el archivo `app.scss` en la carpeta `resources\scss\app.scss` y escribimos lo siguiente.
+
+```php
+.bd-example {
+  --bd-example-padding: 1rem;
+  position: relative;
+  padding: var(--bd-example-padding);
+  border: solid var(--bs-border-color);
+  border-width: 1px 0;
+  background-color: red;
+}
+.bd-example-row {
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  background-color: $purple-800;
+  border: 2px solid $purple-900;
+}
+.bd-example-col {
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  background-color: $purple-500;
+  border: 2px solid $purple-600;
+}
+.element {
+  // Tres columnas para empezar
+  @include row-cols(3);
+
+  // Cinco columnas desde el punto de ruptura medio hacia arriba
+  @include media-breakpoint-up(md) {
+    @include row-cols(5);
+  }
+}
+.example-container {
+  @include make-container();
+  // Make sure to define this width after the mixin to override
+  // `width: 100%` generated by `make-container()`
+  width: 800px;
+}
+
+.example-row {
+  @include make-row();
+  --bd-example-padding: 1rem;
+  border: solid var(--bs-border-color);
+  background-color: red;
+}
+
+.example-content-main {
+  @include make-col-ready();
+
+  @include media-breakpoint-up(sm) {
+    @include make-col(6);
+  }
+  @include media-breakpoint-up(lg) {
+    @include make-col(8);
+  }
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  background-color: $teal-800;
+  border: 2px solid $teal-900;
+}
+
+.example-content-secondary {
+  @include make-col-ready();
+
+  @include media-breakpoint-up(sm) {
+    @include make-col(6);
+  }
+  @include media-breakpoint-up(lg) {
+    @include make-col(4);
+  }
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  background-color: $indigo-800;
+  border: 2px solid $indigo-900;
+}
+```
 [Subir](#top)
