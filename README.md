@@ -11,6 +11,7 @@
 - [Contenedores](#item6)
 - [Sistema de red(Grid)](#item7)
 - [Columnas](#item8)
+- [Gutters](#item9)
 
 <a name="item1"></a>
 
@@ -853,4 +854,18 @@ $grid-breakpoints: (
 }
 
 ```
+[Subir](#top)
+
+<a name="item9"></a>
+
+## Gutters
+
+>Horizontal gutters `.gx-*`
+>Vertical gutters `.gy-*`
+>Horizontal & vertical gutters `.g-*`
+
+>Row columns gutters `g-2 g-lg-3`
+>No gutters `g-0`
+
+
 [Subir](#top)
