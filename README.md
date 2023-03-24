@@ -6,6 +6,8 @@
 - [Instalación](#item1)
 - [Color modes](#item2)
 - [Componentes](#item3)
+- [Variables de componentes](#item4)
+- [Puntos de ruptura](#item5)
 
 <a name="item1"></a>
 
@@ -181,5 +183,35 @@ Route::get('/', function () {
     border-left-color: $red-600;
 }
 ```
+
+[Subir](#top)
+
+<a name="item4"></a>
+
+## Variables de componentes
+
+>Abrimos el archivo `app.scss` en la carpeta `resources\scss\app.scss` y escribimos lo siguiente.
+
+```scss
+var(--bs-blue);
+```
+
+[Subir](#top)
+
+<a name="item5"></a>
+
+## Puntos de ruptura
+
+```scss
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1400px
+);
+```
+**`Nota :`Estos puntos de interrupción se pueden personalizar a través hoja de estilo `_variables.scss` .**
 
 [Subir](#top)
