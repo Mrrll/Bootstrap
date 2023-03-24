@@ -242,6 +242,245 @@
             <div class="example-content-secondary">Secondary content</div>
         </div>
     </div>
+    <h1>Columnas</h1>
+    <h2>Alineación</h2>
+    <h3>Alineamiento vertical</h3>
+    <div class="container text-center">
+        <div class="row align-items-start bd-example2 bd-example2-row">
+            <div class="col bd-example2-col text-light">
+                One of three columns
+            </div>
+            <div class="col bd-example2-col text-light">
+                One of three columns
+            </div>
+            <div class="col bd-example2-col text-light">
+                One of three columns
+            </div>
+        </div>
+    </div>
+    <div class="container text-center">
+        <div class="row align-items-center bd-example2 bd-example2-row">
+            <div class="col bd-example2-col text-light">
+                One of three columns
+            </div>
+            <div class="col bd-example2-col text-light">
+                One of three columns
+            </div>
+            <div class="col bd-example2-col text-light">
+                One of three columns
+            </div>
+        </div>
+    </div>
+    <div class="container text-center">
+        <div class="row align-items-end bd-example2 bd-example2-row">
+            <div class="col bd-example2-col text-light">
+                One of three columns
+            </div>
+            <div class="col bd-example2-col text-light">
+                One of three columns
+            </div>
+            <div class="col bd-example2-col text-light">
+                One of three columns
+            </div>
+        </div>
+    </div>
+    <div class="container text-center">
+        <div class="row bd-example2 bd-example2-row">
+            <div class="col align-self-start bd-example2-col text-light">
+                One of three columns
+            </div>
+            <div class="col align-self-center bd-example2-col text-light">
+                One of three columns
+            </div>
+            <div class="col align-self-end bd-example2-col text-light">
+                One of three columns
+            </div>
+        </div>
+    </div>
+    <h3>Alineación horizontal</h3>
+    <div class="container text-center">
+        <div class="row justify-content-start bd-example3 bd-example2-row">
+            <div class="col-4 bd-example2-col text-light">
+                One of two columns
+            </div>
+            <div class="col-4 bd-example2-col text-light">
+                One of two columns
+            </div>
+        </div>
+        <div class="row justify-content-center bd-example3 bd-example2-row">
+            <div class="col-4 bd-example2-col text-light">
+                One of two columns
+            </div>
+            <div class="col-4 bd-example2-col text-light">
+                One of two columns
+            </div>
+        </div>
+        <div class="row justify-content-end bd-example3 bd-example2-row">
+            <div class="col-4 bd-example2-col text-light">
+                One of two columns
+            </div>
+            <div class="col-4 bd-example2-col text-light">
+                One of two columns
+            </div>
+        </div>
+        <div class="row justify-content-around bd-example3 bd-example2-row">
+            <div class="col-4 bd-example2-col text-light">
+                One of two columns
+            </div>
+            <div class="col-4 bd-example2-col text-light">
+                One of two columns
+            </div>
+        </div>
+        <div class="row justify-content-between bd-example3 bd-example2-row">
+            <div class="col-4 bd-example2-col text-light">
+                One of two columns
+            </div>
+            <div class="col-4 bd-example2-col text-light">
+                One of two columns
+            </div>
+        </div>
+        <div class="row justify-content-evenly bd-example3 bd-example2-row">
+            <div class="col-4 bd-example2-col text-light">
+                One of two columns
+            </div>
+            <div class="col-4 bd-example2-col text-light">
+                One of two columns
+            </div>
+        </div>
+    </div>
+    <h3>Envoltura de columna</h3>
+    <div class="container">
+        <div class="row bd-example3 bd-example2-row">
+            <div class="col-9 bd-example2-col text-light">.col-9</div>
+            <div class="col-4 bd-example2-col text-light">.col-4<br>Como 9 + 4 = 13 &gt; 12, este div de 4 columnas de
+                ancho se envuelve en una nueva línea como una unidad contigua.</div>
+            <div class="col-6 bd-example2-col text-light">.col-6<br>Las columnas subsiguientes continúan a lo largo de
+                la nueva línea..</div>
+        </div>
+    </div>
+    <h3>Saltos de columna</h3>
+    <div class="container text-center">
+        <div class="row bd-example3 bd-example2-row">
+            <div class="col-6 col-sm-3 bd-example2-col text-light">.col-6 .col-sm-3</div>
+            <div class="col-6 col-sm-3 bd-example2-col text-light">.col-6 .col-sm-3</div>
+
+            <!-- Forzar las siguientes columnas para pasar a una nueva línea -->
+            <div class="w-100"></div>
+
+            <div class="col-6 col-sm-3 bd-example2-col text-light">.col-6 .col-sm-3</div>
+            <div class="col-6 col-sm-3 bd-example2-col text-light">.col-6 .col-sm-3</div>
+        </div>
+    </div>
+    <h4>Puntos de interrupción</h4>
+    <div class="container text-center">
+        <div class="row bd-example3 bd-example2-row">
+            <div class="col-6 col-sm-4 bd-example2-col text-light">.col-6 .col-sm-4</div>
+            <div class="col-6 col-sm-4 bd-example2-col text-light">.col-6 .col-sm-4</div>
+
+            <!-- Forzar las siguientes columnas para pasar a una nueva línea en el punto de interrupción md y hacia arriba -->
+            <div class="w-100 d-none d-md-block"></div>
+
+            <div class="col-6 col-sm-4 bd-example2-col text-light">.col-6 .col-sm-4</div>
+            <div class="col-6 col-sm-4 bd-example2-col text-light">.col-6 .col-sm-4</div>
+        </div>
+    </div>
+    <h2>Reordenando</h2>
+    <h3>Ordenar clases</h3>
+    <div class="container text-center">
+        <div class="row bd-example3 bd-example2-row">
+            <div class="col bd-example2-col text-light">
+                Primero en DOM, no se aplica orden
+            </div>
+            <div class="col order-5 bd-example2-col text-light">
+                Segundo en DOM, con un orden más grande
+            </div>
+            <div class="col order-1 bd-example2-col text-light">
+                Tercero en DOM, con un orden de 1
+            </div>
+        </div>
+    </div>
+    <div class="container text-center">
+        <div class="row bd-example3 bd-example2-row">
+            <div class="col order-last bd-example2-col text-light">
+                Primero en DOM, ordenado último
+            </div>
+            <div class="col bd-example2-col text-light">
+                Segundo en DOM, desordenado
+            </div>
+            <div class="col order-first bd-example2-col text-light">
+                Tercero en DOM, ordenado primero
+            </div>
+        </div>
+    </div>
+    <h2>Columnas de compensación</h2>
+    <h3>Clases de compensación</h3>
+    <div class="container text-center">
+        <div class="row bd-example3 bd-example2-row">
+            <div class="col-md-4 bd-example2-col text-light">.col-md-4</div>
+            <div class="col-md-4 offset-md-4 bd-example2-col text-light">.col-md-4 .offset-md-4</div>
+        </div>
+        <div class="row bd-example3 bd-example2-row">
+            <div class="col-md-3 offset-md-3 bd-example2-col text-light">.col-md-3 .offset-md-3</div>
+            <div class="col-md-3 offset-md-3 bd-example2-col text-light">.col-md-3 .offset-md-3</div>
+        </div>
+        <div class="row bd-example3 bd-example2-row">
+            <div class="col-md-6 offset-md-3 bd-example2-col text-light">.col-md-6 .offset-md-3</div>
+        </div>
+    </div>
+    <div class="container text-center">
+        <div class="row bd-example3 bd-example2-row">
+            <div class="col-sm-5 col-md-6 bd-example2-col text-light">.col-sm-5 .col-md-6</div>
+            <div class="col-sm-5 offset-sm-2 col-md-6 offset-md-0 bd-example2-col text-light">.col-sm-5 .offset-sm-2
+                .col-md-6 .offset-md-0</div>
+        </div>
+        <div class="row bd-example3 bd-example2-row">
+            <div class="col-sm-6 col-md-5 col-lg-6 bd-example2-col text-light">.col-sm-6 .col-md-5 .col-lg-6</div>
+            <div class="col-sm-6 col-md-5 offset-md-2 col-lg-6 offset-lg-0 bd-example2-col text-light">.col-sm-6
+                .col-md-5 .offset-md-2 .col-lg-6
+                .offset-lg-0</div>
+        </div>
+    </div>
+    <h2>Utilidades de margen</h2>
+    <div class="container text-center">
+        <div class="row bd-example3 bd-example2-row">
+            <div class="col-md-4 bd-example2-col text-light">.col-md-4</div>
+            <div class="col-md-4 ms-auto bd-example2-col text-light">.col-md-4 .ms-auto</div>
+        </div>
+        <div class="row bd-example3 bd-example2-row">
+            <div class="col-md-3 ms-md-auto bd-example2-col text-light">.col-md-3 .ms-md-auto</div>
+            <div class="col-md-3 ms-md-auto bd-example2-col text-light">.col-md-3 .ms-md-auto</div>
+        </div>
+        <div class="row bd-example3 bd-example2-row">
+            <div class="col-auto me-auto bd-example2-col text-light">.col-auto .me-auto</div>
+            <div class="col-auto bd-example2-col text-light">.col-auto</div>
+        </div>
+    </div>
+    <h2>Clases de columna independientes</h2>
+    <div class="col-3 p-3 mb-2 bd-example2-col text-light">
+        .col-3: width of 25%
+    </div>
+    <div class="col-sm-9 p-3 bd-example2-col text-light">
+        .col-sm-9: width of 75% above sm breakpoint
+    </div>
+    <div class="container clearfix">
+        <img src="..." class="col-md-6 float-md-end mb-3 ms-md-3" alt="...">
+        <svg class="bd-placeholder-img col-md-6 float-md-end mb-3 ms-md-3" width="100%" height="150" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Marcador de posición: imagen flotante responsiva" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#868e96"></rect><text x="35%" y="50%" fill="#dee2e6" dy=".3em">Responsive floated image</text></svg>
+        <p>
+            A paragraph of placeholder text. We're using it here to show the use of the clearfix class. We're adding
+            quite a few meaningless phrases here to demonstrate how the columns interact here with the floated image.
+        </p>
+
+        <p>
+            As you can see the paragraphs gracefully wrap around the floated image. Now imagine how this would look with
+            some actual content in here, rather than just this boring placeholder text that goes on and on, but actually
+            conveys no tangible information at. It simply takes up space and should not really be read.
+        </p>
+
+        <p>
+            And yet, here you are, still persevering in reading this placeholder text, hoping for some more insights, or
+            some hidden easter egg of content. A joke, perhaps. Unfortunately, there's none of that here.
+        </p>
+    </div>
 </body>
 
 </html>

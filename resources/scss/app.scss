@@ -112,3 +112,32 @@ body {
   background-color: $indigo-800;
   border: 2px solid $indigo-900;
 }
+.bd-example2 {
+  --bd-example-padding: 1rem;
+  position: relative;
+  padding: var(--bd-example-padding);
+  border: solid var(--bs-border-color);
+  border-width: 1px 0;
+  background-color: red;
+  height: 150px;
+}
+.bd-example3 {
+  --bd-example-padding: 1rem;
+  position: relative;
+  padding: var(--bd-example-padding);
+  border: solid var(--bs-border-color);
+  border-width: 1px 0;
+  background-color: red;
+}
+.bd-example2-row {
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  background-color: $orange-200;
+  border: 2px solid $orange-300;
+}
+.bd-example2-col {
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  background-color: $orange-500;
+  border: 2px solid $orange-700;
+}
